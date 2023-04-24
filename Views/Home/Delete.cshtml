@@ -1,0 +1,14 @@
+﻿@{            
+    ViewData["Title"] = "Confirm Delete";
+}
+
+@model Entertainer
+
+<h4>Confirm Deletion</h4>
+<p>Are you sure you want to delete @Model.EntStageName?</p> 
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-controller="home" asp-action="list" class="btn btn-primary">Cancel</a>
+    <input type="hidden" asp-for="EntertainerID" />
+</form>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Details Page";
+}
+
+@model Entertainer 
+
+<!--This table shows all the details for the specific entertainer that's been selected'-->
+<h4>Details for @Model.EntStageName:</h4>
+
+<ul>
+    <li>Entertainer ID: @Model.EntertainerID</li>
+    <li>Stage Name: @Model.EntStageName</li>
+    <li>SSN: @Model.EntSSN</li>
+    <li>Street Address: @Model.EntStreetAddress</li>
+    <li>City: @Model.EntCity</li>
+    <li>State: @Model.EntState</li>
+    <li>Zipcode: @Model.EntZipCode</li>
+    <li>Phone Number: @Model.EntPhoneNumber</li>
+    <li>Website: @Model.EntWebPage</li>
+    <li>Email Address: @Model.EntEmailAddress</li>
+    <li>Date Entered: @Model.DateEntered</li>
+</ul>
+
+<br />
+
+<a asp-controller="Home" asp-action="Edit" asp-route-id="@Model.EntertainerID" class="btn btn-primary">Edit</a>
+<a asp-controller="Home" asp-action="Delete" asp-route-id="@Model.EntertainerID" class="btn btn-danger">Delete</a> 

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Entertainers List";
+}
+
+@model List<Entertainer>
+
+<h3>Our Entertainers:</h3>
+<!--This table displays all the entertainers in the list we received from the controller-->
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Stage Name</td>
+            <td>Details</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.EntStageName</td>
+                    <td><a asp-controller="Home" asp-action="Details" asp-route-id="@x.EntertainerID">View Details</a></td>
+                </tr>
+            }
+    </tbody>
+</table>
+<br />
+<a class="btn btn-primary" asp-controller="Home" asp-action="Create">Add an Entertainer</a>

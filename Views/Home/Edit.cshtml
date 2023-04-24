@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Entertainer Form";
+}
+
+@model Entertainer
+
+<h4>Entertainer Form:</h4>
+
+<!--This div populates with error messages if the form is submitted with invalid data-->
+<div asp-validation-summary="All"></div>
+
+<form method="post">
+    <input type="hidden" asp-for="EntertainerID" />
+
+    <label asp-for="EntStageName">Stage Name</label>
+    <input asp-for="EntStageName" /> <br />
+
+    <label asp-for="EntSSN">SSN</label>
+    <input asp-for="EntSSN" /> <br />
+
+    <label asp-for="EntStreetAddress">Street Address</label>
+    <input asp-for="EntStreetAddress" /> <br />
+
+    <label asp-for="EntCity">City</label>
+    <input asp-for="EntCity" /> <br />
+
+    <label asp-for="EntState">State</label>
+    <input asp-for="EntState" /> <br />
+
+    <label asp-for="EntZipCode">Zipcode</label>
+    <input asp-for="EntZipCode" /> <br />
+
+    <label asp-for="EntPhoneNumber">Phone Number</label>
+    <input asp-for="EntPhoneNumber" /> <br />
+
+    <label asp-for="EntWebPage">Website</label>
+    <input asp-for="EntWebPage" /> <br />
+
+    <label asp-for="EntEmailAddress">Email</label>
+    <input asp-for="EntEmailAddress" /> <br />
+
+    <label asp-for="DateEntered">Date Entered</label>
+    <input asp-for="DateEntered" /> <br />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
